@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhes1by125cf6"]
+
+[ext_resource type="Script" uid="uid://cixkq6e7es0cd" path="res://modules/scene_transitions/scene_transition_manager.gd" id="1_vunwl"]
+[ext_resource type="Shader" uid="uid://bxawkgjg30aas" path="res://modules/scene_transitions/circle_fade.gdshader" id="2_ymb1b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k6mio"]
+shader = ExtResource("2_ymb1b")
+shader_parameter/time = 0.0
+
+[node name="SceneTransitionManager" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_vunwl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_k6mio")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

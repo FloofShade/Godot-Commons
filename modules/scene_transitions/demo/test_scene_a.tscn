@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr4vp2yu0y0h3"]
+
+[ext_resource type="Script" uid="uid://dl2f7pyv44bby" path="res://modules/scene_transitions/demo/test_scene_a.gd" id="1_up4ey"]
+
+[node name="TestSceneA" type="Node2D"]
+script = ExtResource("1_up4ey")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 130.0
+offset_bottom = 100.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Scene A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TransitionNormal" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Transition"
+
+[connection signal="pressed" from="VBoxContainer/TransitionNormal" to="." method="_on_transition_normal_pressed"]
